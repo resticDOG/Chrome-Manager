@@ -1171,7 +1171,7 @@ class ChromeManager:
                         path = win32process.GetModuleFileNameEx(handle, 0)
                         win32api.CloseHandle(handle)
                         
-                        if "chrome.exe" in path.lower():
+                        if "virtualbrowser.exe" in path.lower():
                             title = win32gui.GetWindowText(hwnd)
                             if title and not title.startswith("Chrome 传递"):
                                 # 为每个窗口分配一个调试端口
